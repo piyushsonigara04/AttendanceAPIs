@@ -33,4 +33,6 @@ const CourseSchema = new mongoose.Schema({
         type:mongoose.Schema.Types.ObjectId,
         ref:'Teacher'
     }]
-})
+});
+
+module.exports = mongoose.model("Course",CourseSchema);
