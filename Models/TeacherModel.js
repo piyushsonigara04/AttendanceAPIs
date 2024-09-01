@@ -6,10 +6,10 @@ const TeacherSchema = new mongoose.Schema({
         required:true
     },
     prn:{
-        type:mongoose.Schema.Types.BigInt,
+        type:String,
         required:true
     },
-    email:{
+    username:{
         type:String,
         required:true,
     },
@@ -18,9 +18,9 @@ const TeacherSchema = new mongoose.Schema({
         required:true,
     },
     subjects:[{
-        id : {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: 'Subject'
+        subname : {
+            type:String,
+            required:true
         },
         panels : {
             type: [String],
