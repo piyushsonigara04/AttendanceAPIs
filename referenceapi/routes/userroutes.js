@@ -14,7 +14,6 @@ router.get("/isloggedin", authController.isLoggedIn);
 
 // Protect all routes after this middle
 router.use(authController.protect);
-
 router.patch("/updateMyPassword", authController.updatePassword);
 router.get("/me", userController.getMe, userController.getUser);
 router.patch(

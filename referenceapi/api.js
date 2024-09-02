@@ -2,21 +2,24 @@ const express = require("express");
 const morgan = require("morgan");
 const cors = require("cors");
 const app = express();
+
+//router section
 const userRouter = require("./routes/userroutes");
 const canteenroutes = require("./routes/canteenroutes");
 const itemroutes = require("./routes/itemroutes");
 const orderingRouter = require("./routes/orderingRoutes");
-const cookieParser = require("cookie-parser");
 
+const cookieParser = require("cookie-parser");
 app.use(express.json());
 app.use(cookieParser());
+
 if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
 }
 app.enable("trust proxy");
 
 const corsOptions = {
-  origin: 'http://localhost:3000',
+  origin: "http://localhost:3000",
   credentials: true,
 };
 app.use(cors(corsOptions));
@@ -26,6 +29,7 @@ app.get("/api", (req, res) => {
   console.log(req.cookies.jwt);
 });
 
+//routes
 app.use("/api/v1/users", userRouter);
 app.use("/api/v1/canteens", canteenroutes);
 app.use("/api/v1/items", itemroutes);

@@ -21,7 +21,6 @@ const createSendToken = (user, statusCode, req, res, view = false) => {
     httpOnly: true,
     // secure: req.secure || req.headers["x-forwarded-proto"] === "https",
   });
-
   // Remove password from outpu
   user.password = undefined;
 

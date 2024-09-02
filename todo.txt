@@ -1,0 +1,23 @@
+server - connectivity - mongo, initiating the http sever 
+
+api.js - middlewares , express app 
+
+.env file - 
+dev_env - development , production , test
+port 
+mongodb_cloud_link
+db_password
+
+//userpassword setting 
+JWT_SECRET=yourSecretKey
+JWT_EXPIRES_IN=1d  
+JWT_COOKIE_EXPIRES_IN=1
+
+Tasks for Piyush
+- end point for - interacting with teacher model
+- teacher profile page
+
+Tasks for Akash
+- forgot password page
+- login and signup page
+- end point for forgot password token
